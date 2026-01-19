@@ -24,5 +24,9 @@ buttonElement.addEventListener("click", showJoke);
 
 function showJoke(){
     jokeText.innerHTML = ""; //To clear previous joke
+
+    //Pick a random joke
+    let randomIndex = Math.floor(Math.random() * jokes.length);
+    let randomJoke = jokes[randomIndex];
 }
 
