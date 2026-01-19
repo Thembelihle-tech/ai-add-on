@@ -17,8 +17,12 @@ let jokes = [
     {
         question: "Why did the math book look sad?",
         answer: "Because it had too many problems 📘😂"
-    }
-]
+    },
+];
 
 buttonElement.addEventListener("click", showJoke);
+
+function showJoke(){
+    jokeText.innerHTML = ""; //To clear previous joke
+}
 
