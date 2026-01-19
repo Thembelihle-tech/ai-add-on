@@ -28,5 +28,17 @@ function showJoke(){
     //Pick a random joke
     let randomIndex = Math.floor(Math.random() * jokes.length);
     let randomJoke = jokes[randomIndex];
+
+    let typewriter = new Typewriter(jokeText, {
+        loop: false,
+        delay: 50,
+    });
+
+    typewriter
+    .typeString(randomJoke.question)
+    .pauseFor(1000)
+    .typeString("<br><br>")
+    .typeString(randomJoke.answer)
+    .start();
 }
 
