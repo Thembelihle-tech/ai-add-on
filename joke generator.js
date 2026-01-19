@@ -1,0 +1,1 @@
+let buttonElement = document.querySelector("#joke");S
