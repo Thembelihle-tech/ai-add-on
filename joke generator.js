@@ -1,6 +1,28 @@
 let buttonElement = document.querySelector("#joke");
 let jokeText = document.querySelector("#joke-text");
 
+buttonElement.addEventListener("click", showJoke);
+
+function showJoke(){
+    jokeText.innerHTML = ""; //To clear previous joke
+
+    //Pick a random joke
+    let randomIndex = Math.floor(Math.random() * jokes.length);
+    let randomJoke = jokes[randomIndex];
+
+    let typewriter = new Typewriter(jokeText, {
+        loop: false,
+        delay: 50,
+    });
+
+    typewriter
+    .typeString(randomJoke.question)
+    .pauseFor(1000)
+    .typeString("<br><br>")
+    .typeString(randomJoke.answer)
+    .start();
+}
+
 let jokes = [
     {
         question: "Why do French people eat snails?",
